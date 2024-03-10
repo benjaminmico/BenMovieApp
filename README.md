@@ -1,79 +1,65 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# BenMovieApp Installation Guide 🚀
 
-# Getting Started
+Welcome to the BenMovieApp! This guide will help you set up and run the application on your local environment.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Prerequisites
 
-## Step 1: Start the Metro Server
+Before you begin, ensure you have the following installed:
+- Node.js (v18 or higher)
+- npm (v7 or higher) or yarn
+- React Native CLI
+- For iOS: Xcode and CocoaPods
+- For Android: Android Studio and Android SDK
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## Installation Steps
 
-To start Metro, run the following command from the _root_ of your React Native project:
+1. Install dependencies
 
-```bash
-# using npm
+npm install
+# or
+yarn install
+
+
+2. For iOS, install CocoaPods dependencies:
+
+```sh
+cd ios && pod install && cd ..
+```
+
+3. Start the Metro Bundler
+
+```sh
 npm start
-
-# OR using Yarn
+# or
 yarn start
 ```
 
-## Step 2: Start your Application
+4. Run the app on your preferred platform:
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
-
-```bash
-# using npm
+```sh
 npm run android
-
-# OR using Yarn
-yarn android
-```
-
-### For iOS
-
-```bash
-# using npm
+# or
 npm run ios
-
-# OR using Yarn
+# or use yarn
+yarn android
+# or
 yarn ios
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
 
-## Step 3: Modifying your App
+## What's Inside the Build 🛠️
 
-Now that you have successfully run the app, let's modify it.
+- React Native & React Navigation: Utilizes the latest React Native version (0.73.5) for cross-platform mobile app development and React Navigation for seamless screen transitions.
+- State Management with Zustand: A minimalist state manager that's straightforward and hooks-based, perfect for this project's scale.
+- Fast Image Loading: react-native-fast-image for efficient image loading, enhancing
+- TypeScript: Ensures type safety and enhances developer experience with auto-completions and error checks.
+- Development Tools: ESLint, Prettier, and Husky for code quality and consistency. Commitlint ensures commit messages follow conventional standards.
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+## Some few notes
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+- Testing: The initial setup doesn't include Jest for unit and snapshot testing, ensuring app reliability. Component testing with React Testing Library
+- CI/CD: The initial setup doesn't include CI/CD. However, GitHub Actions is planned for automated testing and deployment, streamlining the development workflow.
+API Integration: Custom API tools were developed for state management, although React Query could be an alternative for more complex cases. The app displays 8 elements by default due to the API's limitations on trending movie selections.
+UI Choices: Titles are displayed instead of posters in search results for a smoother experience, considering the potential bandwidth and performance impact of loading high-resolution images.
 
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.

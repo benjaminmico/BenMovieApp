@@ -1,0 +1,51 @@
+{
+  "View": {
+    "prefix": "v",
+    "body": [
+      "<View className=\"flex-1 items-center justify-center\">",
+      "  $1",
+      "</View>"
+    ],
+    "description": "A Simple View "
+  },
+  "Text": {
+    "prefix": "t",
+    "body": [
+      "<Text variant=\"body\" className=\"text-center\">",
+      "  $1",
+      "</Text>"
+    ],
+    "description": "A Simple Text"
+  },
+  "export *": {
+    "prefix": "ex *",
+    "body": ["export * from '.$1';"],
+    "description": "export *"
+  },
+  "Component": {
+    "prefix": "comp",
+    "body": [
+      "import * as React from 'react';",
+      "",
+      "import { Text, View } from '@/ui';",
+      "",
+      "type Props = {",
+      "  $2",
+      "};",
+      "export const ${1:CompName} = ({}: Props) => {",
+      "  return (",
+      "    <View className=\"flex-1\">",
+      "      <Text className=\"text-base\">${1:CompName} Component</Text>",
+      "    </View>",
+      "  );",
+      "};",
+      ""
+    ],
+    "description": "Component"
+  },
+  "navigate": {
+    "prefix": "navigate",
+    "body": ["const { navigate } = useNavigation();", ""],
+    "description": "navigate"
+  }
+}

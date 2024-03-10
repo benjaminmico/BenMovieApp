@@ -25,6 +25,9 @@ module.exports = function (api) {
             '.js',
             '.json',
           ],
+          alias: {
+            '^react-native$': 'react-native-web',
+          },
         },
       ],
     ],

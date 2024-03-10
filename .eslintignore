@@ -4,3 +4,5 @@ __tests__/
 android/
 ios/
 ios/
+index.js
+index.web.js
